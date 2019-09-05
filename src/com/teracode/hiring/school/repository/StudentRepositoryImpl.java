@@ -1,16 +1,17 @@
 package com.teracode.hiring.school.repository;
 
 import com.teracode.hiring.school.model.Student;
+import com.teracode.hiring.school.model.Subject;
 
 import java.time.LocalDate;
 import java.util.*;
 
 public class StudentRepositoryImpl implements StudentRepository {
 
-    private List<Student> students;
+    private Set<Student> students;
 
     public StudentRepositoryImpl() {
-        this.students = new ArrayList<>();
+        this.students = new HashSet<>();
     }
 
     @Override
@@ -32,7 +33,12 @@ public class StudentRepositoryImpl implements StudentRepository {
     }
 
     @Override
-    public void save(List<Student> list){
+    public List<Student> getStudentsBySubject(Subject subject) {
+        return subject.getStudents();
+    }
+
+    @Override
+    public void save(List<Student> list) {
         students.addAll(list);
     }
 

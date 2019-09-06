@@ -150,6 +150,32 @@ Answer:
     or removed. And meet with a start and end, with an organizer user and a list 
     of participants.
     
+
+B) Deliver diagrams of the user interface for each step of a booking process.
+
+    See the simple layout on
+[https://ezefalcon.github.io/School/BookingLayout/index.html](https://ezefalcon.github.io/School/BookingLayout/index.html)
+    
+    First of all, you have to login, in this example you are already logged in 
+    as User. Now go to Bookings in the navbar.
+    
+[https://ezefalcon.github.io/School/BookingLayout/bookings.html](https://ezefalcon.github.io/School/BookingLayout/bookings.html)
+
+    You can book a meeting filling the inputs, with this we can generate a payload
+    (the organizer will be the logged user) and post to an endpoint in an api.
+    
+    Example of the payload in JSON:
+    
+    {
+      "name":"room1",
+      "participants": {
+        "username": "Juan",
+        "username": "John"
+      },
+      "start": "07/02/2019 16:00:00",
+      "end": "07/02/2019 17:00:00"
+    }
+    
 C) Considering that meetings cannot last less than 15 minutes and more than 3
 hours, also meetings cannot overlap with each other in the same room, deliver
 the validation method that is in charge to verify these rules.

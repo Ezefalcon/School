@@ -38,6 +38,7 @@ D) Create at least two different database table structure diagrams to describe t
 possible ways that the domain could be translated to the database. Explain
 pros and cons of each structure.
 
+Answer:
 
 ![alt text](https://gyazo.com/48d633c93292d547115a7da5740e8b95.png)
 
@@ -152,3 +153,8 @@ Answer:
 C) Considering that meetings cannot last less than 15 minutes and more than 3
 hours, also meetings cannot overlap with each other in the same room, deliver
 the validation method that is in charge to verify these rules.
+
+Answer:
+
+    See the implemented methods in the Room model.
+[https://github.com/Ezefalcon/School/blob/master/src/com/teracode/hiring/bookings/model/Room.java](https://github.com/Ezefalcon/School/blob/master/src/com/teracode/hiring/bookings/model/Room.java)

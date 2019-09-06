@@ -120,9 +120,9 @@ a field for birth date. How would you optimize this query?
 Answer:
 
     In postgreSQL:
-    SELECT * FROM students s WHERE
-    EXTRACT(YEAR FROM age(s.fecha_nacimiento)) > 18
-
+    SELECT * FROM students s 
+    WHERE EXTRACT(YEAR FROM age(s.fecha_nacimiento)) >= 18
+    AND EXTRACT(YEAR FROM age(s.fecha_nacimiento)) <= 21
 ----
 H) We need to build a new application and we want to be able to have the
    business logic on the database engine instead of having it in our Java code. Can

@@ -111,7 +111,7 @@ Answer:
 
     In postgreSQL:
     SELECT * FROM students s WHERE
-    EXTRACT(YEAR FROM AGE(s.fecha_nacimiento)) > 18
+    EXTRACT(YEAR FROM age(s.fecha_nacimiento)) > 18
     
 H) We need to build a new application and we want to be able to have the
    business logic on the database engine instead of having it in our Java code. Can
@@ -134,3 +134,21 @@ Pros:
 Cons: 
 
     - It may affect the performance of the database
+    
+    
+Exercise 2:
+
+A) Create the domain model diagram with all the possible entities, its attributes
+and relationships
+
+Answer:
+
+![alt text](https://gyazo.com/900443c70e18097b79ec58fde1740fc8.png)
+    
+    A simple user entity, a room, responsible of how a meet is created, updated
+    or removed. And meet with a start and end, with an organizer user and a list 
+    of participants.
+    
+C) Considering that meetings cannot last less than 15 minutes and more than 3
+hours, also meetings cannot overlap with each other in the same room, deliver
+the validation method that is in charge to verify these rules.

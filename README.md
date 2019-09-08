@@ -80,7 +80,7 @@ E)Having the following query:
     SELECT * FROM janitor j
         INNER JOIN employee e
         ON e.id = j.id
-        INNTER JOIN p.id = j.id
+        INNTER JOIN person p
         ON p.id = j.id
     WHERE j.workingArea = 'Hallway';
 
@@ -92,13 +92,13 @@ Answer:
 
     If we only need the first and last name, it will be useless to get all the 
     attributes from those tables, we can select only the lastName and firstName 
-    from the db.
+    from the db. Also we can add an index if the query is used a lot.
     
-    SELECT * FROM janitor j
+    SELECT lastName, firstName FROM janitor j
         INNER JOIN employee e
         ON e.id = j.id
-        INNTER JOIN p.id = j.id
-        ON p.id = j.id
+        INNER JOIN person p
+        ON p.id = e.id
     WHERE j.workingArea = 'Hallway';
     
 ----
